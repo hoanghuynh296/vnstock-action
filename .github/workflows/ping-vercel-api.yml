@@ -1,0 +1,15 @@
+name: Ping Vercel API Every 60 Seconds
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # chạy mỗi phút
+  workflow_dispatch:       # cho phép chạy thủ công từ GitHub UI
+
+jobs:
+  ping-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Gọi đến API stock-price/HAG trên Vercel
+        run: |
+          curl -s https://stock-tracking-flax.vercel.app/stock-price/HAG
