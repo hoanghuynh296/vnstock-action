@@ -2,14 +2,12 @@ name: Ping Vercel API Every Minute in Trading Hours
 
 on:
   schedule:
-    # every minute
-    - cron: '*/1 * * * *'
-    # # 08:59 VN (01:59 UTC)
-    # - cron: '59 1 * * 1-5'
-    # # 09:00–08:29 VN (02:00–08:29 UTC)
-    # - cron: '*/1 2-8 * * 1-5'
-    # # 15:30–15:31 VN (08:30–08:31 UTC)
-    # - cron: '30-31 8 * * 1-5'
+    # 08:59 VN (01:59 UTC)
+    - cron: '59 1 * * 1-5'
+    # 09:00–08:29 VN (02:00–08:29 UTC)
+    - cron: '*/1 2-8 * * 1-5'
+    # 15:30–15:31 VN (08:30–08:31 UTC)
+    - cron: '30-31 8 * * 1-5'
   workflow_dispatch:
 
 jobs:
